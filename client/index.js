@@ -15,6 +15,7 @@ getSubmit.addEventListener('click', () => {
     axios
         .get('http://localhost:5050/api/inventory')
         .then(res => addToView(res.data))
+        .catch(err => console.log(err))
 });
 
 getParamsSubmit.addEventListener('click', () => {
